@@ -40,6 +40,7 @@ describe('Luma Application', () => {
         const tabNames = ['Women', 'Men', 'Gear', 'Training', 'Sale'];
         tabNames.forEach(tabName => {
             cy.get('[id="store.menu"]').contains(tabName).should('be.visible');
+        
         });
     });
 
