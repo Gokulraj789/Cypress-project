@@ -1,11 +1,20 @@
 import './commands';
 import '@4tw/cypress-drag-drop';
 
+export const selectors = {
+    headerLinks: '[class="header links"]',
+    usernameField: '[name="login[username]"]',
+    passwordField: '[name="login[password]"]',
+    loginButton: '.action.login.primary',
+  };
+  
+Cypress.Commands.add('signup', (linkname:string,username: string, password: string) => {
+    cy.get(selectors.headerLinks).contains(linkname).click(); 
+    cy.get(selectors.usernameField).type(username);
+    cy.get(selectors.passwordField).type(password);
+    cy.get(selectors.loginButton).click();
+  });
 
-//  Cypress.Commands.add('login', (email:string, password:string) => {... 
-//     // Cypress.Commands.add('login', (email, password) => { ... })
-
-//   });
 
 //
 //
