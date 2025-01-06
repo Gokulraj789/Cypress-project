@@ -5,7 +5,7 @@
     "lib": ["ES6", "dom"],
     "types": ["cypress", "node"],
     "noUnusedLocals": false,
-    "noUnusedParameters": false
+    "noUnusedParameters": false,
   },
   "include": ["**/*.ts"]
 }
