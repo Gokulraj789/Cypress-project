@@ -15,7 +15,6 @@ const cypressJsonConfig: Cypress.ConfigOptions & any = {
   specPattern: [
     'cypress/Tests/**/*.{js,jsx,ts,tsx}'
   ],
-  experimentalMemoryManagement: true,
   video: true,
 
 };
