@@ -18,5 +18,3 @@ jobs:
       - name: Start the Server
         run: npm start &
 
-      - name: Wait for Server to Be Ready
-        run: npx wait-on http://localhost:8080
