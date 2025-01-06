@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2016",
+    "baseUrl": "./cypress", 
     "lib": ["ES6", "dom"],
     "types": ["cypress", "node"],
     "noUnusedLocals": false,
