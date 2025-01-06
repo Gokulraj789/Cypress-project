@@ -20,8 +20,8 @@ const cypressJsonConfig: Cypress.ConfigOptions & any = {
 };
 export default defineConfig({
   e2e: {
-    baseUrl: 'http://localhost:8080',
-    ...cypressJsonConfig,
+    baseUrl: 'http://localhost:5173',
+        ...cypressJsonConfig,
    // specPattern: 'cypress/Tests/**/*.{js,jsx,ts,tsx}', // Points to your custom spec location
     //supportFile: 'cypress/support/e2e.ts',
     
