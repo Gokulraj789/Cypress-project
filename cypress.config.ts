@@ -20,7 +20,7 @@ const cypressJsonConfig: Cypress.ConfigOptions & any = {
 };
 export default defineConfig({
   e2e: {
-    baseUrl: 'http://localhost:8080',
+    baseUrl: 'https://magento.softwaretestingboard.com/',
         ...cypressJsonConfig,
    // specPattern: 'cypress/Tests/**/*.{js,jsx,ts,tsx}', // Points to your custom spec location
     //supportFile: 'cypress/support/e2e.ts',
