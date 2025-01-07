@@ -11,7 +11,7 @@ describe('Luma Application', () => {
     });
 
     it('Signs Up with Valid Credentials', () => {
-        cy.signup('Sign In','gokulrajrg04@gmail.com','Gokul2359@');
+        cy.signIn(Cypress.env("username"),Cypress.env("password"));
         cy.get(hp.strings.WC).should('contain.text', 'Welcome');
     });
 
@@ -23,10 +23,11 @@ describe('Luma Application', () => {
     });
 
     it('Verifies Tab Names', () => {
-        const tabNames = ['Women', 'Men', 'Gear', 'Training', 'Sale'];
-        tabNames.forEach(tabName => {
+       cy.fixture('Homepage.json').then((data)=>{
+        const tabs=data.tabnames;
+        tabs.forEach(tabName => {
             hp.getTabList().contains(tabName).should('be.visible');
-        });
-     });
-
+       })
+    })  
+});
 });

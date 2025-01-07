@@ -8,8 +8,8 @@ export const selectors = {
     loginButton: '.action.login.primary',
   };
   
-Cypress.Commands.add('signup', (linkname:string,username: string, password: string) => {
-    cy.get(selectors.headerLinks).contains(linkname).click(); 
+Cypress.Commands.add('signIn', (username: string, password: string) => {
+    cy.get(selectors.headerLinks).contains('Sign In').click(); 
     cy.get(selectors.usernameField).type(username);
     cy.get(selectors.passwordField).type(password);
     cy.get(selectors.loginButton).click();

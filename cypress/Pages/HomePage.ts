@@ -29,5 +29,7 @@ export class homepage{
     return cy.get(this.selectors.SIGNOUT_DD).eq(index)
   }
 }
-const Homepage=new homepage()
-export const hp=Homepage;
+
+export const hp=new homepage();
+
+

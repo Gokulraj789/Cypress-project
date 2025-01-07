@@ -17,15 +17,10 @@ export class login{
     };
 
     
-    getPageUrl() {
-        return `${this.strings.LOGINPAGE_URL}`;
-      }
-
     visitUrl() {
-        cy.visit(this.getPageUrl());
+        cy.visit(this.strings.LOGINPAGE_URL);
       }
 
 }
 
-const loginpage= new login()
-export const  lp=loginpage;
+export const  lp= new login();
