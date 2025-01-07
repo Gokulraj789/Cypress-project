@@ -23,14 +23,6 @@ jobs:
       with:
         node-version: 16
 
-    # Step 3: Install dependencies
-    - name: Install dependencies
-      run: npm install
-
-    # Step 4: Install Cypress
-    - name: Install Cypress
-      run: npm install cypress --save-dev
-
     # Step 5: Set up Cypress binary
     - name: Verify Cypress
       run: npx cypress verify
