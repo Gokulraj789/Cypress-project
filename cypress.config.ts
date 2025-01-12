@@ -13,13 +13,15 @@ const cypressJsonConfig: Cypress.ConfigOptions & any = {
   pageLoadTimeout: 40000,
   nodeOptions: `--max-old-space-size=16384`,
   specPattern: [
-    'cypress/Tests/**/*.{js,jsx,ts,tsx}'
+    'cypress/Tests/UITesting/*.{js,jsx,ts,tsx}',
+    'cypress/Tests/ApiTesting/*.{js,jsx,ts,tsx}'
   ],
   video: true,
 
 };
 export default defineConfig({
   e2e: {
+ 
     baseUrl: 'https://magento.softwaretestingboard.com/',
         ...cypressJsonConfig,
    // specPattern: 'cypress/Tests/**/*.{js,jsx,ts,tsx}', // Points to your custom spec location
