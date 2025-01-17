@@ -3,11 +3,12 @@ import{ hp } from "../../Pages/HomePage"
 require('@4tw/cypress-drag-drop');
 
 
+
 describe('Luma Application', () => {
 
     it('Navigate and Validates the Logo of the Application',{retries:1}, () => {
         lp.visitUrl();
-        cy.get(lp.selectors.LOGO).should('be.visible');
+        cy.get(lp.selectors.LOGO, {timeout:2000}).should('be.visible');
     });
 
     it('Signs Up with Valid Credentials', () => {

@@ -1,5 +1,6 @@
 import './commands';
 import '@4tw/cypress-drag-drop';
+import 'cypress-drag-drop';
 
 export const selectors = {
     headerLinks: '[class="header links"]',

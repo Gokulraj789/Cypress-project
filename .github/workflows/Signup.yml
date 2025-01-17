@@ -7,6 +7,8 @@ on:
   pull_request:
     branches:
       - main
+  schedule:
+        - cron: '0 2 * * *'  # This cron expression runs the workflow daily at midnight UTC
 
 jobs:
   cypress-run:

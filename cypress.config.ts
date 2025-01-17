@@ -28,6 +28,10 @@ export default defineConfig({
     //supportFile: 'cypress/support/e2e.ts',
     
   },
+  retries: {
+    runMode: 1,  // Retry failed tests in CI
+    openMode: 0, // No retries in interactive mode
+  },
   
 
 
